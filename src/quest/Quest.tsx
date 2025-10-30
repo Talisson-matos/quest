@@ -21,27 +21,27 @@ export default function App() {
 
   const [sections, setSections] = useState<Section[]>([
     {
-      title: "Identificação do Problema",
+      title: "Introdução ao Nicho e Produto",
       icon: "🧩",
       questions: [
-        { id: "p1", question: "O participante já enfrentou esse tipo de problema anteriormente?", answer: "" },
-        { id: "p2", question: "Com que frequência o participante se depara com esse problema?", answer: "" },
-        { id: "p3", question: "Em que situações o problema costuma ocorrer com mais intensidade?", answer: "" },
-        { id: "p4", question: "O participante considera esse problema uma prioridade a ser resolvida?", answer: "" },
+        { id: "p1", question: "Qual é o nicho e produto que você pretende promover ?", answer: "" },
+        { id: "p2", question: "Por que uma pessoa procuraria seu produto para comprar ?", answer: "" },
+        { id: "p3", question: "Quais seriam as dificuldades no cotidiano desta pessoa que não possui este produto ainda ?", answer: "" },
+        { id: "p4", question: "Como essa produto melhoraria a realidade desta pessoa ?", answer: "" },
       ],
     },
     {
-      title: "Impacto do Problema",
+      title: "Pesquisa de inferência do problema",
       icon: "🔍",
       questions: [
-        { id: "i1", question: "De que forma esse problema afeta a rotina ou os resultados do participante?", answer: "" },
-        { id: "i2", question: "O participante já deixou de realizar alguma atividade por causa desse problema?", answer: "" },
-        { id: "i3", question: "O problema gera algum tipo de prejuízo (financeiro, emocional, operacional)?", answer: "" },
-        { id: "i4", question: "O participante já tentou resolver esse problema por conta própria?", answer: "" },
+        { id: "i1", question: "Como a pessoa tendo este problema procuraria resolvê-lo ?", answer: "" },
+        { id: "i2", question: "Como a pessoa procuraria a resposta do problema dela na internet, caso opta-se por esta alternativa ?", answer: "" },
+        { id: "i3", question: "Na busca na internet, o que levaria esta pessoa a desistir de encontrar a solução de seu problema ?", answer: "" },
+        { id: "i4", question: "O que poderia ser feito para evitar isto ?", answer: "" },
       ],
     },
     {
-      title: "Soluções Tentadas",
+      title: "Pesquisa de Soluções Existentes",
       icon: "🛠️",
       questions: [
         { id: "s1", question: "Quais soluções o participante já utilizou para lidar com esse problema?", answer: "" },
@@ -51,27 +51,27 @@ export default function App() {
       ],
     },
     {
-      title: "Expectativas e Desejos",
+      title: "Pesquisa de Concorrência",
       icon: "💡",
       questions: [
-        { id: "e1", question: "O que o participante espera de uma solução ideal para esse problema?", answer: "" },
-        { id: "e2", question: "Quais características ou funcionalidades seriam indispensáveis?", answer: "" },
-        { id: "e3", question: "O participante estaria disposto a pagar por uma solução eficaz?", answer: "" },
-        { id: "e4", question: "O que faria o participante confiar em uma nova solução?", answer: "" },
+        { id: "e1", question: "Quais as soluções que a concorrência esta implementando na internet para resolver o problema desta pessoa ?", answer: "" },
+        { id: "e2", question: "Quais são os pontos positivos e negativos destas implementações", answer: "" },
+        { id: "e3", question: "Que solução eu poderia inferir baseado nas ideias da concorrência ?", answer: "" },
+        { id: "e4", question: "Essa solução seria viável para a pessoa ? Quais seriam as principais objeções ?", answer: "" },
       ],
     },
     {
-      title: "Conhecimento e Interesse pelo Produto",
+      title: "Pesquisa de Público-Alvo",
       icon: "🧠",
       questions: [
-        { id: "c1", question: "O participante já conhece o produto em questão?", answer: "" },
-        { id: "c2", question: "O participante já utilizou esse produto anteriormente?", answer: "" },
-        { id: "c3", question: "Qual é o nível de interesse do participante em adquirir esse tipo de produto?", answer: "" },
-        { id: "c4", question: "O participante considera esse produto essencial ou opcional em sua rotina?", answer: "" },
+        { id: "c1", question: "Como classificaria as principais pessoas que procuram este produto ? Idade, Gênero, Escolaridade, Classe Social, Etnia, Localização . . .", answer: "" },
+        { id: "c2", question: "Quais relações existem entre este público segmentado com este produto?", answer: "" },
+        { id: "c3", question: "Como adaptaria o produto da melhor maneira possível para este publico segmentado ?", answer: "" },
+        { id: "c4", question: "Quais pessoas não fazem parte do público alvo, por quê, e se haveria possibilidade de alguma forma integra-las?", answer: "" },
       ],
     },
     {
-      title: "Percepção e Avaliação",
+      title: "Pesquisa sobre o Produto",
       icon: "💬",
       questions: [
         { id: "pa1", question: "Quais características o participante considera mais importantes nesse tipo de produto?", answer: "" },
@@ -81,38 +81,28 @@ export default function App() {
       ],
     },
     {
-      title: "Comportamento de Compra",
+      title: "Pesquisa sobre Comportamento de Compra",
       icon: "🛒",
       questions: [
-        { id: "cc1", question: "Onde o participante costuma comprar produtos dessa categoria (lojas físicas, online, marketplaces)?", answer: "" },
-        { id: "cc2", question: "O participante costuma comparar marcas antes de comprar esse tipo de produto?", answer: "" },
+        { id: "cc1", question: "Quais seriam os principais valores e percepções de mundo da pessoa que busca comprar este produto ?", answer: "" },
+        { id: "cc2", question: "Como esses valores e percepções afetariam a decisão de compra do produto ?", answer: "" },
         { id: "cc3", question: "Quais fatores influenciam a decisão de compra do participante (preço, qualidade, avaliações, marca)?", answer: "" },
-        { id: "cc4", question: "O participante estaria disposto a pagar mais por um produto com diferenciais?", answer: "" },
+        { id: "cc4", question: "Como estes fatores afetariam a decisão de compra do produto?", answer: "" },
       ],
     },
     {
-      title: "Marketing e Comunicação",
+      title: "Pesquisa de Mensagem e Comunicação",
       icon: "📣",
       questions: [
-        { id: "mc1", question: "O participante costuma receber anúncios sobre esse tipo de produto?", answer: "" },
-        { id: "mc2", question: "Quais canais de comunicação o participante mais utiliza para conhecer novos produtos (redes sociais, e-mail, TV, etc.)?", answer: "" },
-        { id: "mc3", question: "O participante já recomendou esse tipo de produto para outras pessoas?", answer: "" },
-        { id: "mc4", question: "O participante se lembra de alguma campanha ou anúncio marcante relacionado ao produto?", answer: "" },
+        { id: "mc1", question: "Qual seria a melhor solução que a pessoa buscaria encontrar na internet ?", answer: "" },
+        { id: "mc2", question: "Como essa solução seria veiculada da melhor maneira possível baseando no ponto de vista da pessoa ?", answer: "" },
+        { id: "mc3", question: "O que faria ela desanimar na sua jornada pela solução ?", answer: "" },
+        { id: "mc4", question: "Como implementaríamos uma solução para resolver isto ?", answer: "" },
       ],
     },
+   
     {
-      title: "Perfil Demográfico",
-      icon: "🎯",
-      questions: [
-        { id: "pd1", question: "Qual é a faixa etária do participante?", answer: "" },
-        { id: "pd2", question: "Qual é o gênero com o qual o participante se identifica?", answer: "" },
-        { id: "pd3", question: "Em qual cidade e estado o participante reside?", answer: "" },
-        { id: "pd4", question: "Qual é o nível de escolaridade do participante?", answer: "" },
-        { id: "pd5", question: "Qual é a ocupação atual do participante?", answer: "" },
-      ],
-    },
-    {
-      title: "Hábitos e Comportamentos",
+      title: "Pesquisa de Hábitos e Preferências",
       icon: "💡",
       questions: [
         { id: "hc1", question: "Com que frequência o participante utiliza produtos ou serviços relacionados ao tema da pesquisa?", answer: "" },
@@ -123,30 +113,30 @@ export default function App() {
       ],
     },
     {
-      title: "Necessidades e Problemas",
+      title: "Pesquisa de Nova Perspectiva de Solução",
       icon: "🧠",
       questions: [
-        { id: "np1", question: "Qual é o principal desafio enfrentado pelo participante relacionado ao tema da pesquisa?", answer: "" },
-        { id: "np2", question: "O que o participante gostaria que fosse diferente nos produtos ou serviços dessa área?", answer: "" },
-        { id: "np3", question: "Quais funcionalidades ou benefícios são considerados mais importantes pelo participante?", answer: "" },
+        { id: "np1", question: "Qual é a melhor solução para resolvermos o problema da pessoa baseando-se até aqui?", answer: "" },
+        { id: "np2", question: "Como implementaríamos esta solução? passo a passo.", answer: "" },
+        { id: "np3", question: "O que podemos esperar de reação do cliente frete a solução apresentada ?", answer: "" },
       ],
     },
     {
-      title: "Comportamento de Compra - Persona",
+      title: "Pesquisa de acompanhamento e Melhoria Contínua",
       icon: "💸",
       questions: [
-        { id: "ccp1", question: "O participante costuma pesquisar preços antes de comprar?", answer: "" },
-        { id: "ccp2", question: "O que leva o participante a confiar em uma marca ou produto?", answer: "" },
-        { id: "ccp3", question: "Qual foi a última compra realizada pelo participante e qual foi o motivo da escolha?", answer: "" },
+        { id: "ccp1", question: "Como poderemos acompanhar a solução para ver o resultado ao longo do tempo ?", answer: "" },
+        { id: "ccp2", question: "Caso a solução fracasse, que atitute tomaremos a respeito?", answer: "" },
+        { id: "ccp3", question: "Como trabalharemos para evitar os antigos erros?", answer: "" },
       ],
     },
     {
-      title: "Preferências e Valores",
+      title: "Pesquisa de Satisfação do Cliente",
       icon: "❤️",
       questions: [
-        { id: "pv1", question: "O que motiva o participante a seguir uma marca nas redes sociais?", answer: "" },
-        { id: "pv2", question: "Quais causas ou valores são importantes para o participante?", answer: "" },
-        { id: "pv3", question: "O participante prefere marcas mais tradicionais ou inovadoras?", answer: "" },
+        { id: "pv1", question: "O cliente se sente satisfeito com o produto?", answer: "" },
+        { id: "pv2", question: "Foi dificultoso para criação, execução e  acompanhamento do processo de resolução?", answer: "" },
+        { id: "pv3", question: "O que poderemos fazer para melhorar o processo para a próxima campanha e mitigar os problemas enfrentados?", answer: "" },
       ],
     },
   ]);
