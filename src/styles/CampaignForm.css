@@ -1,0 +1,201 @@
+/* ============================================= */
+/*        CAMPANHA FINAL – ESTILO PREMIUM        */
+/* ============================================= */
+
+.summary-form-section h2 {
+  text-align: center;
+  font-size: 1.9rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #60a5fa, #3b82f6);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 2rem;
+}
+
+/* Labels */
+.summary-form label {
+  display: block;
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: #e0e7ff;
+  margin-bottom: 0.6rem;
+  position: relative;
+}
+
+/* Inputs e Textarea */
+.summary-form input[type="text"],
+.summary-form input[type="url"],
+.summary-form textarea {
+  width: 100%;
+  padding: 0.95rem 1.2rem;
+  background: rgba(30, 41, 59, 0.95);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  color: #f1f5f9;
+  font-size: 0.98rem;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(8px);
+}
+
+.summary-form input:focus,
+.summary-form textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background: rgba(15, 24, 46, 0.95);
+  box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.25);
+  transform: translateY(-2px);
+  color: wheat;
+}
+
+/* Selects (horário) */
+.summary-form select {
+  padding: 0.95rem 1.2rem;
+  background: rgba(30, 41, 59, 0.95);
+  border: 2px solid transparent;
+  border-radius: 16px;
+  color: #f1f5f9;
+  font-size: 0.98rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.summary-form select:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.25);
+}
+
+/* Grupo de checkboxes (idade, sexo, renda) */
+.checkbox-group {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 0.9rem;
+  padding: 1.2rem;
+  background: rgba(30, 41, 59, 0.5);
+  border-radius: 18px;
+  border: 1px dashed rgba(148, 163, 184, 0.3);
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  cursor: pointer;
+  padding: 0.4rem 0;
+  transition: color 0.2s ease;
+}
+
+.checkbox-group label:hover {
+  color: #e0e7ff;
+}
+
+/* Checkbox personalizado */
+.checkbox-group input[type="checkbox"] {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid #475569;
+  border-radius: 8px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease;
+}
+
+.checkbox-group input[type="checkbox"]:checked {
+  background: #3b82f6;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.3);
+}
+
+.checkbox-group input[type="checkbox"]:checked::after {
+  content: "✓";
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  font-size: 14px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Horário */
+.horario-group {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0;
+}
+
+.horario-group span {
+  color: #94a3b8;
+  font-weight: 600;
+}
+
+/* Botão final – O GRANDE DESTAQUE */
+.btn-export-summary {
+  margin: 2.5rem auto 0;
+  display: block;
+  padding: 1.4rem 4rem;
+  font-size: 1.35rem;
+  font-weight: 900;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: white;
+  background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
+  box-shadow: 0 12px 30px rgba(16, 185, 129, 0.4);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-export-summary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: left 0.7s;
+}
+
+.btn-export-summary:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 20px 40px rgba(16, 185, 129, 0.5);
+}
+
+.btn-export-summary:hover::before {
+  left: 100%;
+}
+
+.btn-export-summary:active {
+  transform: translateY(-2px) scale(1.02);
+}
+
+/* Responsivo */
+@media (max-width: 640px) {
+  .checkbox-group {
+    grid-template-columns: 1fr;
+  }
+  .horario-group {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .horario-group select {
+    width: 100%;
+  }
+  .btn-export-summary {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+  }
+}
